@@ -1,0 +1,416 @@
+html,
+
+body {
+  height: 100%;
+  border: 1px;
+  margin: 0;
+}
+
+header {
+  height: 50px;
+background-color: #23272A;
+ overflow: hidden;}
+
+section {
+  min-height: calc(100% - (50px + 50px + 10px));
+  font-family: 'pdark';  
+  background: #2C2F33;
+  color:#FFFFFF;
+  border: 5px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  font-family: 'pdark';  
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #23272A;
+}
+blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.body_fixed {
+  height: calc(100% - (50px + 50px + 10px));
+  font-family: 'pdark';  
+  background: #2C2F33;
+  color:#FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.mit {
+  background-color: #23272A;
+  font-family: 'pdark';  
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+@font-face {
+    font-family: 'pdark';
+    src: url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2Fpdark.ttf') format('ttf'),
+         url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2Fpdark.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title {
+  background-image: url(https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2Ffavicon-32x32.png?v=1614695141196);
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: #7289DA;
+  font-family: 'pdark';
+  float: left center;
+  border-left: 10px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.title2 {
+  color: #7289DA;
+  font-family: 'pdark';
+  font-size: 60px;
+  width: 100%;
+}
+img.logo1 {
+  width:200px;
+  
+  margin:0px;
+  border-width:0px;
+  border-color:#000000;
+  border-style:solid;
+}
+.discription1 {
+   color: #7289DA;
+  display: block;
+  text-align: center;
+  padding: 4px 0px 1px;
+  text-decoration: none;
+  font-size: 30px;
+  border-bottom: 3px solid #7289DA; 
+  border-top: 3px solid #7289DA;
+}
+
+.topnav .title {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 7px 40px;
+  text-decoration: none;
+  font-size: 40px;
+  border-bottom: 0px solid #7289DA;
+}
+.topnav .button {
+  font-family: 'pdark';
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 4px solid transparent;
+}
+
+.topnav .button:hover {
+  border-bottom: 4px solid #7289DA;
+}
+
+.topnav a.active {
+  font-family: 'pdark';
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 4px solid #7289DA;
+
+}
+/* Style all font awesome icons */
+.faa3 {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 3px solid transparent;
+}
+.fa {
+  font-family: 'pdark';
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 3px solid transparent;
+}
+
+.fa:hover{
+ border-bottom: 3px solid #7289DA;
+}
+
+.fa-github {
+  background: #3B5998;
+  color: #ffffff;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: #FFFFFF;
+}
+.fa-globe {
+background: #7289DA;
+  color: #FFFFFF;
+}
+.SMBs {
+border-radius:10px; 
+   opacity: .5;
+    padding: 5px;
+  border: 5px solid gray;
+  width: calc(38px + 38px + 38px);
+}
+.SMBs:hover {
+border-radius:10px; 
+background: #23272A; 
+width: calc(38px + 38px + 38px);
+opacity: .9;
+      padding: 5px;
+border: 5px solid #7289DA;
+
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+ width: 100%;
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #7289DA; /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #7289DA;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #7289DA;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  font-size: 35px;
+  font-weight: bold;
+  color: red;
+  font-family: 'pdark';
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+form {
+   width: 400px;
+}
+input[type=text], input[type=email] {
+  width: 400px;
+  height: 50px;
+  padding: 10px 10px 12px;
+  margin: 10px 0px 10px ;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0.10); /* Black w/ opacity */
+  border: 3px solid #7289DA;
+  font-family: 'pdark';
+  color: #fff;
+  font-size: 20px;
+}
+button {
+  background-color: #7289DA;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 345px;
+  font-family: 'pdark';
+      font-size: 20px;
+
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  color: red;
+  padding: 10px 10px;
+  margin: 170px 0;
+  border: none;
+  cursor: pointer;
+  font-family: 'pdark';
+  font-size: 20px;
+ width: 50px;
+ height: 50px;
+  background-color: #7289DA;
+}
+.container {
+  padding: 20px;
+   width: 400px;
+   height: 460px;
+
+}
+@media screen and (max-width: 200px) {
+  .cancelbtn {
+    width: 100%;
+  }
+}
+.subscribe {
+  background-color: #7289DA;
+  color: white;
+  padding: 10px 10px;
+  margin: 170px 0;
+  border: none;
+  cursor: pointer;
+  width: 346px;
+  font-family: 'pdark';
+  font-size: 20px;
+  height: 50px;
+
+}
+.title3 {
+   color: #7289DA;
+  display: block;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 8px 0;
+  border-bottom: 3px solid #7289DA; 
+  border-top: 3px solid #7289DA;
+}
+.game {
+height: 100%;
+width: 100%;
+}
+.gridbutton {
+   border-top: 1px solid #23272a;
+   background: #23272a;
+   background: -webkit-gradient(linear, left top, left bottom, from(#23272a), to(#23272a));
+   background: -webkit-linear-gradient(top, #23272a, #23272a);
+   background: -moz-linear-gradient(top, #23272a, #23272a);
+   background: -ms-linear-gradient(top, #23272a, #23272a);
+   background: -o-linear-gradient(top, #23272a, #23272a);
+   padding: 10.5px;
+   margin: 1.5px;
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #7288da;
+   font-size: 24px;
+   font-family: 'pdark';
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.gridbutton:hover {
+   border-top-color: #7288da;
+   background: #7288da;
+   color: #23272a;
+   }
+.gridbutton:active {
+   border-top-color: #7288da;
+   background: #7288da;
+   }
+
+h2{
+   font-size: 24px;
+   font-family: 'pdark';
+   text-decoration: none;
+   vertical-align: middle;
+}
+@font-face {
+    font-family: 'clock';
+    src: url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2FDIGITALDREAMFAT.ttf') format('ttf'),
+         url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2FDIGITALDREAMFAT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.time{
+  color: #7289DA;
+  font-family: 'clock';
+  float: left center;
+  font-size: 100px;
+}
+.infotime{
+  color: #7289DA;
+  font-family: 'clock';
+  float: left center;
+  font-size: 20px;
+}
+.timebox{
+  height:100%;
+  background: #2C2F33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gridbutton-container {
+    width: 90%;
+    overflow-y: auto;
+}
+
+.gridbutton-container > a {
+    width: 200px;
+    height: 50px;
+    float: left; 
+    margin: 15px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
