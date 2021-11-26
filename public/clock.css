@@ -1,0 +1,43 @@
+body{
+  overflow-y:hidden;
+  overflow-x:hidden;
+}
+.Weather {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: red;
+  font-family: "clock";
+  font-size: 1vw;
+}
+
+.clocktxt {
+  color: red;
+  font-family: "clock";
+  float: left center;
+  font-size: 9vw;
+  text-align: justify center;
+}
+.datetxt {
+  color: red;
+  font-family: "clock";
+  float: center;
+  font-size: 3vw;
+  text-align: justify center;
+}
+.Things {
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ClockAndDate {
+  text-align: center;
+  height: 30%;
+  width: 90%;
+}
+
+
+  
+    
