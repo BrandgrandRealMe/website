@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const fs = require('fs');
 app.use(express.static("public"));
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/pages/home.html");
@@ -73,8 +74,17 @@ app.get("/games/dreamscape", (request, response) => {
 app.get("/bg", (request, response) => {
   response.sendFile(__dirname + "/pages/time.html");
 });
+app.get("/BikeMounts.gcode", (request, response) => {
+  response.sendFile(__dirname + "/files/BikeMounts.gcode");
+});
+app.get("/what.gif", (request, response) => {
+  response.sendFile(__dirname + "/pages/knickknacks/gifviddiscord.html");
+});
 app.get("/Knicknacks", (request, response) => {
   response.sendFile(__dirname + "/pages/knickknacks/knickknacks.html");
+});
+app.get("/mdlg", (request, response) => {
+  response.sendFile(__dirname + "/pages/megadirlinkgen.php");
 });
 app.get("/knickknacks/clock", (request, response) => {
   response.sendFile(__dirname + "/pages/knickknacks/clock.html");
@@ -84,6 +94,36 @@ app.get("/knickknacks/test", (request, response) => {
 });
 app.get("/knickknacks/periodictable", (request, response) => {
   response.sendFile(__dirname + "/pages/knickknacks/periodictable.html");
+});
+app.get('/favicon/:fname', (req, res) => {
+ if (!fs.readFileSync('./favicon/' + req.params.fname)) r404(res)
+ else
+  res.sendFile(__dirname + '/favicon/' + req.params.fname);
+});
+app.get('/public/:fname', (req, res) => {
+ if (!fs.readFileSync('./public/' + req.params.fname)) r404(res)
+ else
+  res.sendFile(__dirname + '/public/' + req.params.fname);
+});
+app.get('/file/:fname', (req, res) => {
+ if (!fs.readFileSync('./files/' + req.params.fname)) r404(res)
+ else
+  res.sendFile(__dirname + '/files/' + req.params.fname);
+});
+app.get('/v/:fname', (req, res) => {
+ if (!fs.readFileSync(`./videos/${req.params.fname}.mp4`)) r404(res)
+ else
+  res.sendFile(__dirname + `/videos/${req.params.fname}.mp4`);
+});
+app.get('/logo/:fname', (req, res) => {
+ if (!fs.readFileSync('./logo/' + req.params.fname)) r404(res)
+ else
+  res.sendFile(__dirname + '/logo/' + req.params.fname);
+});
+app.get('/fonts/:fname', (req, res) => {
+ if (!fs.readFileSync('./fonts/' + req.params.fname)) r404(res)
+ else
+  res.sendFile(__dirname + '/fonts/' + req.params.fname);
 });
 app.get('*', function(req, res){
   res.sendFile(__dirname + '/404.html');

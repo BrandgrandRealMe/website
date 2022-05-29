@@ -13,7 +13,7 @@ background-color: #23272A;
 
 section {
   min-height: calc(100% - (50px + 50px + 10px));
-  font-family: 'pdark';  
+  font-family: 'Archery';  
   background: #2C2F33;
   color:#FFFFFF;
   border: 5px solid transparent;
@@ -22,7 +22,7 @@ section {
 }
 
 footer {
-  font-family: 'pdark';  
+  font-family: 'Archery';  
   color: #FFFFFF;
   text-decoration: none;
   display: block;
@@ -49,41 +49,62 @@ blink {
 }
 .body_fixed {
   height: calc(100% - (50px + 50px + 10px));
-  font-family: 'pdark';  
+  font-family: 'Archery';  
   background: #2C2F33;
   color:#FFFFFF;
   display: flex;
   flex-direction: column;
 }
+.body_fixedrow {
+  height: calc(100% - (50px + 50px + 10px));
+  font-family: 'Archery';  
+  background: #2C2F33;
+  color:#FFFFFF;
+  display: flex;
+  flex-direction: row;
+}
 
 .mit {
   background-color: #23272A;
-  font-family: 'pdark';  
+  font-family: 'Archery';  
   color: #FFFFFF;
   text-decoration: none;
 
 }
 @font-face {
-    font-family: 'pdark';
-    src: url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2Fpdark.ttf') format('ttf'),
-         url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2Fpdark.woff') format('woff');
+    font-family: 'Archerys';
+    src: url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2FArchery.ttf') format('ttf'),
+         url('https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2FArchery.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Archery';
+    src: url('./fonts/Archery.eot');
+    src: url('./fonts/Archery.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Archery.woff') format('woff'),
+         url('./fonts/Archery.ttf') format('truetype'),
+         url('./fonts/Archery.svg#sf_archery_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 .title {
-  background-image: url(https://cdn.glitch.com/d5b447db-537e-47a7-b2c6-66da106c6762%2Ffavicon-32x32.png?v=1614695141196);
+  background-image: url(https://website.brandgrandrealm.repl.co/logo/logo.png);
   background-repeat: no-repeat;
   background-position: left center;
   color: #7289DA;
-  font-family: 'pdark';
+  font-family: 'Archery';
   float: left center;
   border-left: 10px solid transparent;
   border-bottom: 5px solid transparent;
+  background-size: 30px 30px;
+  
 }
 .title2 {
   color: #7289DA;
-  font-family: 'pdark';
+  font-family: 'Archery';
   font-size: 60px;
   width: 100%;
 }
@@ -91,6 +112,7 @@ img.logo1 {
   width:200px;
   
   margin:0px;
+  margin-top:10px;
   border-width:0px;
   border-color:#000000;
   border-style:solid;
@@ -112,11 +134,11 @@ img.logo1 {
   text-align: center;
   padding: 7px 40px;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 33px;
   border-bottom: 0px solid #7289DA;
 }
 .topnav .button {
-  font-family: 'pdark';
+  font-family: 'Archery';
   float: right;
   display: block;
   color: #f2f2f2;
@@ -132,7 +154,7 @@ img.logo1 {
 }
 
 .topnav a.active {
-  font-family: 'pdark';
+  font-family: 'Archery';
   float: right;
   display: block;
   color: #f2f2f2;
@@ -154,8 +176,8 @@ img.logo1 {
   font-size: 18px;
   border-bottom: 3px solid transparent;
 }
-.fa {
-  font-family: 'pdark';
+.fab {
+  font-family: 'Archery';
   float: right;
   display: block;
   color: #f2f2f2;
@@ -166,23 +188,28 @@ img.logo1 {
   border-bottom: 3px solid transparent;
 }
 
-.fa:hover{
- border-bottom: 3px solid #7289DA;
+.fab:hover{
+ border-bottom: 4px solid #7289DA;
 }
 
-.fa-github {
-  background: #3B5998;
-  color: #ffffff;
+.fab-github {
+  color: #3B5998;
+
 }
 
-.fa-twitter {
-  background: #55ACEE;
-  color: #FFFFFF;
+.fab-twitter {
+  color: #55ACEE;
+
 }
-.fa-globe {
-background: #7289DA;
-  color: #FFFFFF;
+.fab-youtube {
+color: #ff0000;
+
 }
+.fab-discord {
+color: #7289DA;
+
+}
+
 .SMBs {
 border-radius:10px; 
    opacity: .5;
@@ -230,7 +257,7 @@ border: 5px solid #7289DA;
   font-size: 35px;
   font-weight: bold;
   color: red;
-  font-family: 'pdark';
+  font-family: 'Archery';
 }
 
 /* Close button on hover */
@@ -267,7 +294,7 @@ input[type=text], input[type=email] {
   box-sizing: border-box;
   background-color: rgba(0,0,0,0.10); /* Black w/ opacity */
   border: 3px solid #7289DA;
-  font-family: 'pdark';
+  font-family: 'Archery';
   color: #fff;
   font-size: 20px;
 }
@@ -279,7 +306,7 @@ button {
   border: none;
   cursor: pointer;
   width: 345px;
-  font-family: 'pdark';
+  font-family: 'Archery';
       font-size: 20px;
 
 }
@@ -292,7 +319,7 @@ button:hover {
   margin: 170px 0;
   border: none;
   cursor: pointer;
-  font-family: 'pdark';
+  font-family: 'Archery';
   font-size: 20px;
  width: 50px;
  height: 50px;
@@ -317,7 +344,7 @@ button:hover {
   border: none;
   cursor: pointer;
   width: 346px;
-  font-family: 'pdark';
+  font-family: 'Archery';
   font-size: 20px;
   height: 50px;
 
@@ -354,7 +381,7 @@ width: 100%;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: #7288da;
    font-size: 24px;
-   font-family: 'pdark';
+   font-family: 'Archery';
    text-decoration: none;
    vertical-align: middle;
    }
@@ -370,7 +397,7 @@ width: 100%;
 
 h2{
    font-size: 24px;
-   font-family: 'pdark';
+   font-family: 'Archery';
    text-decoration: none;
    vertical-align: middle;
 }
