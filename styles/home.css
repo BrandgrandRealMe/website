@@ -72,3 +72,127 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Communities Section */
+.communities-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.platform-section {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+[data-theme='dark'] .platform-section {
+    background: #2d3748;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.platform-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+}
+
+.platform-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.platform-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.platform-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Platform-specific colors */
+.discord {
+    background-color: #5865F2;
+    color: white;
+}
+
+.revolt {
+    background-color: #FF4654;
+    color: white;
+}
+
+.telegram {
+    background-color: #26A5E4;
+    color: white;
+}
+
+.community-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.community-list li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+[data-theme='dark'] .community-list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.community-list li:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='dark'] .community-list li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.community-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--ifm-font-color-base);
+}
+
+.community-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.community-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.community-desc {
+    font-size: 0.9rem;
+    color: var(--ifm-color-secondary);
+    opacity: 0.8;
+}
+
+.community-arrow {
+    color: var(--ifm-color-secondary);
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    .platform-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .community-button {
+        padding: 0.75rem 1rem;
+    }
+}
