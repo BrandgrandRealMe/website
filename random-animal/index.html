@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Animal Photo - Brandon's Directory</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/random-animal.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+    <div class="container">
+        <h1>Random Animal Photo</h1>
+        <p class="intro">Click a button below to see a random photo of your favorite animal!</p>
+        <a href="/" class="back-link">← Back to Brandon's Directory</a>
+        <div class="animal-controls">
+            <button class="fetch-button" data-animal="dog">Dog</button>
+            <button class="fetch-button" data-animal="cat">Cat</button>
+            <button class="fetch-button" data-animal="fox">Fox</button>
+            <button class="fetch-button" data-animal="bird">Bird</button>
+        </div>
+        <div id="animal-result" class="animal-result">
+            <!-- Animal card will be inserted here -->
+        </div>
+    </div>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/random-animal.js"></script>
+</body>
+</html>

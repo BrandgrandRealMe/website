@@ -1,40 +1,67 @@
-h2 {
+  /* Headings */
+  h2 {
     font-size: 2rem;
     color: var(--ifm-color-primary-dark);
     margin: 2rem 0 1.5rem;
     text-align: center;
-}
-
-[data-theme='dark'] h2 {
+  }
+  
+  [data-theme='dark'] h2 {
     color: var(--ifm-color-primary-light);
-}
-
-.subdomain-list, .project-list, .tool-list {
+  }
+  
+  /* List Styles (Subdomains, Projects, Tools, Fun Tools) */
+  .subdomain-list,
+  .project-list,
+  .tool-list,
+  .fun-tools-list {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 3rem;
-}
-
-.subdomain-list li, .project-list li, .tool-list li {
-    background: #ffffff;
+    padding: 0;
+  }
+  
+  .subdomain-list li,
+  .project-list li,
+  .tool-list li,
+  .fun-tools-list li {
+    background: #ffffff; /* Light theme background */
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light theme shadow */
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-[data-theme='dark'] .subdomain-list li, [data-theme='dark'] .project-list li, [data-theme='dark'] .tool-list li {
-    background: #2d3748;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.subdomain-list li:hover, .project-list li:hover, .tool-list li:hover {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  [data-theme='dark'] .subdomain-list li,
+  [data-theme='dark'] .project-list li,
+  [data-theme='dark'] .tool-list li,
+  [data-theme='dark'] .fun-tools-list li {
+    background: #2d3748; /* Dark theme background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Dark theme shadow */
+  }
+  
+  .subdomain-list li:hover,
+  .project-list li:hover,
+  .tool-list li:hover,
+  .fun-tools-list li:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.subdomain-list a, .project-list a, .tool-list a {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Generic hover shadow (light/dark) */
+  }
+  
+  /* Specific hover shadow for dark theme if needed, overriding generic */
+  [data-theme='dark'] .subdomain-list li:hover,
+  [data-theme='dark'] .project-list li:hover,
+  [data-theme='dark'] .tool-list li:hover,
+  [data-theme='dark'] .fun-tools-list li:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Darker hover shadow for dark theme */
+  }
+  
+  .subdomain-list a,
+  .project-list a,
+  .tool-list a,
+  .fun-tools-list a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,153 +73,208 @@ h2 {
     transition: color 0.2s;
     width: 100%;
     height: 100%;
-}
-
-.subdomain-list a:hover, .project-list a:hover, .tool-list a:hover {
+  }
+  
+  .subdomain-list a:hover,
+  .project-list a:hover,
+  .tool-list a:hover,
+  .fun-tools-list a:hover {
     color: var(--ifm-color-primary-lighter);
-}
-
-.subdomain-list p, .project-list p, .tool-list p {
+  }
+  
+  .subdomain-list p,
+  .project-list p,
+  .tool-list p,
+  .fun-tools-list p {
     font-size: 0.95rem;
-    color: #4b5563;
+    color: #4b5563; /* Light theme secondary text */
     margin-top: 0.75rem;
     line-height: 1.5;
-}
-
-[data-theme='dark'] .subdomain-list p, [data-theme='dark'] .project-list p, [data-theme='dark'] .tool-list p {
-    color: #d1d5db;
-}
-
-@media (max-width: 768px) {
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .subdomain-list, .project-list, .tool-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Communities Section */
-.communities-container {
+  }
+  
+  [data-theme='dark'] .subdomain-list p,
+  [data-theme='dark'] .project-list p,
+  [data-theme='dark'] .tool-list p,
+  [data-theme='dark'] .fun-tools-list p {
+    color: #d1d5db; /* Dark theme secondary text */
+  }
+  
+  /* Fun Tools Specific */
+  .fun-tools-intro {
+    font-size: 1.1rem;
+    color: #4a5568; /* Light theme specific secondary text */
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+  }
+  
+  [data-theme='dark'] .fun-tools-intro {
+    color: #cbd5e0; /* Dark theme specific secondary text */
+  }
+  
+  /* Communities Section */
+  .communities-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 3rem;
-}
-
-.platform-section {
-    background: #ffffff;
+  }
+  
+  .platform-section {
+    background: #ffffff; /* Light theme background */
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light theme shadow */
     overflow: hidden;
-}
-
-[data-theme='dark'] .platform-section {
-    background: #2d3748;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.platform-header {
+  }
+  
+  [data-theme='dark'] .platform-section {
+    background: #2d3748; /* Dark theme background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Dark theme shadow */
+  }
+  
+  .platform-header {
     display: flex;
     align-items: center;
     padding: 1rem 1.5rem;
     gap: 1rem;
-}
-
-.platform-header h3 {
+  }
+  
+  .platform-header h3 {
     margin: 0;
     font-size: 1.5rem;
-}
-
-.platform-icon {
+  }
+  
+  .platform-icon {
     width: 32px;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.platform-icon svg {
+    border-radius: 50%;
+  }
+  
+  .platform-icon svg {
     width: 24px;
     height: 24px;
-}
-
-/* Platform-specific colors */
-.discord {
-    background-color: #5865F2;
+  }
+  
+  /* Platform-specific colors */
+  .discord {
+    background-color: #5865f2;
     color: white;
-}
-
-.revolt {
-    background-color: #FF4654;
+  }
+  
+  .revolt {
+    background-color: #ff4654;
     color: white;
-}
-
-.telegram {
-    background-color: #26A5E4;
+  }
+  
+  .telegram {
+    background-color: #26a5e4;
     color: white;
-}
-
-.community-list {
+  }
+  
+  .community-list {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.community-list li {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .community-list li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Light theme border */
     transition: background-color 0.2s;
-}
-
-[data-theme='dark'] .community-list li {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.community-list li:hover {
-    background-color: rgba(0, 0, 0, 0.03);
-}
-
-[data-theme='dark'] .community-list li:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.community-button {
+  }
+  
+  [data-theme='dark'] .community-list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Dark theme border */
+  }
+  
+  .community-list li:hover {
+    background-color: rgba(0, 0, 0, 0.03); /* Light theme hover */
+  }
+  
+  [data-theme='dark'] .community-list li:hover {
+    background-color: rgba(255, 255, 255, 0.05); /* Dark theme hover */
+  }
+  
+  .community-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.5rem;
     text-decoration: none;
-    color: var(--ifm-font-color-base);
-}
-
-.community-info {
+    color: var(--ifm-font-color-base); /* Uses Docusaurus base font color */
+  }
+  
+  .community-info {
     display: flex;
     flex-direction: column;
-}
-
-.community-name {
+  }
+  
+  .community-name {
     font-weight: 600;
     margin-bottom: 0.25rem;
-}
-
-.community-desc {
+  }
+  
+  .community-desc {
     font-size: 0.9rem;
-    color: var(--ifm-color-secondary);
+    color: var(--ifm-color-secondary); /* Uses Docusaurus secondary color */
     opacity: 0.8;
-}
-
-.community-arrow {
+  }
+  
+  .community-arrow {
     color: var(--ifm-color-secondary);
     margin-left: 1rem;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /* Specific styling for FOSS Dump community entry */
+  .community-foss-dump .community-name {
+    color: #3b82f6; /* Example: A nice blue for FOSS Dump name (light theme) */
+  }
+  
+  [data-theme='dark'] .community-foss-dump .community-name {
+    color: #93c5fd; /* Example: Lighter blue for dark theme FOSS Dump name */
+  }
+  
+  .community-foss-dump .community-desc {
+    color: #60a5fa; /* Example: A lighter blue for FOSS Dump description (light theme) */
+  }
+  
+  [data-theme='dark'] .community-foss-dump .community-desc {
+    color: #bfdbfe; /* Example: Even lighter blue for dark theme FOSS Dump desc */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .subdomain-list,
+    .project-list,
+    .tool-list,
+    .fun-tools-list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
     .platform-header {
-        padding: 0.75rem 1rem;
+      padding: 0.75rem 1rem;
     }
-    
+  
     .community-button {
-        padding: 0.75rem 1rem;
+      padding: 0.75rem 1rem;
     }
-}
+  
+    .subdomain-list li,
+    .project-list li,
+    .tool-list li,
+    .fun-tools-list li {
+      /* Adjusted padding for list items on mobile */
+      padding: 1rem;
+    }
+  
+    .fun-tools-list a {
+      /* Adjust padding inside fun tools list item link on mobile */
+      padding: 1rem;
+    }
+  }

@@ -1,0 +1,86 @@
+.color-controls {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.generate-button {
+    background: var(--ifm-color-primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.generate-button:hover {
+    background: var(--ifm-color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.color-result {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.color-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+[data-theme='dark'] .color-card {
+    background: #2d3748;
+}
+
+.color-card:hover {
+    transform: translateY(-6px);
+}
+
+.color-swatch {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make it a circle */
+    margin: 0 auto 1rem;
+    border: 3px solid var(--ifm-color-primary);
+    transition: background-color 0.3s ease-in-out;
+}
+
+[data-theme='dark'] .color-swatch {
+    border-color: var(--ifm-color-primary-light);
+}
+
+.color-code {
+    font-family: 'Courier New', monospace;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--ifm-color-primary);
+    margin: 0;
+}
+
+[data-theme='dark'] .color-code {
+    color: var(--ifm-color-primary-light);
+}
+
+@media (max-width: 768px) {
+    .generate-button {
+        width: 100%;
+        max-width: 250px;
+        padding: 0.5rem 1rem;
+    }
+    .color-card {
+        padding: 1rem;
+    }
+    .color-swatch {
+        width: 100px;
+        height: 100px;
+    }
+}
