@@ -1,0 +1,78 @@
+.drop-area {
+    border: 3px dashed var(--ifm-color-primary);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--ifm-color-primary);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px; /* Limit width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+[data-theme='dark'] .drop-area {
+    border-color: var(--ifm-color-primary-light);
+    color: var(--ifm-color-primary-light);
+}
+
+.drop-area:hover,
+.drop-area.dragover {
+    background-color: var(--ifm-color-primary-lightest);
+    border-color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .drop-area:hover,
+[data-theme='dark'] .drop-area.dragover {
+    background-color: #3d4f66; /* A slightly lighter dark shade */
+    border-color: var(--ifm-color-primary-dark);
+}
+
+#viewer-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    height: 500px; /* Fixed height for the viewer */
+    margin: 2rem auto;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden; /* Ensure Three.js content stays within bounds */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] #viewer-wrapper {
+    border-color: #444;
+    background-color: #1e2530; /* Darker background for the viewer */
+}
+
+#viewer {
+    width: 100%;
+    height: 100%;
+    display: block; /* Remove extra space below canvas */
+}
+
+#viewer canvas {
+    display: block; /* Essential for correct sizing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .drop-area {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+    #viewer-wrapper {
+        height: 400px; /* Smaller height on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .drop-area {
+        padding: 1.5rem;
+    }
+    #viewer-wrapper {
+        height: 300px; /* Even smaller height for very small screens */
+    }
+}
